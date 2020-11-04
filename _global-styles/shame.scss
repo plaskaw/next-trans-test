@@ -1,0 +1,26 @@
+//only for development
+.contact {
+  label {
+    width: 200px;
+    padding: 5px;
+    display: inline-block;
+  }
+
+  select, input, textarea {
+    border: 1px solid;
+    padding: 5px;
+    width: 300px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .hasError {
+    color: red;
+  }
+
+  button {
+    border: 1px outset;
+    margin-left: 200px;
+    margin-bottom: 10px;
+  }
+}

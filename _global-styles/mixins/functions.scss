@@ -1,0 +1,69 @@
+// STYLES RESPOND TO WIDTH
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: $mobile){
+      @content;
+    }
+  }
+  @if $media == tablet {
+    @media only screen and (max-width: $tablet){
+      @content;
+    }
+  }
+  @else if $media == desktop {
+    @media only screen and (max-width: $desktop){
+      @content;
+    }
+  }
+  @else {
+    @media only screen and (max-width: $media){
+      @content;
+    }
+  }
+}
+
+// STYLES RESPOND FROM WIDTH
+@mixin respond-from($media) {
+  @if $media == mobile {
+    @media only screen and (min-width: $mobile + 1){
+      @content;
+    }
+  }
+  @if $media == tablet {
+    @media only screen and (min-width: $tablet){
+      @content;
+    }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $desktop + 1){
+      @content;
+    }
+  }
+  @else {
+    @media only screen and (min-width: $media){
+      @content;
+    }
+  }
+}
+
+// FONT DECLARATION
+@mixin font($group, $id:regular) {
+  @each $font in $font-stack{
+    @if($group == map-get($font, group) and $id == map-get($font, id)) {
+      font-family: map-get($font, font);
+      font-weight: map-get($font, weight);
+      font-style: map-get($font, style);
+    }
+ }
+}
+
+// COLOR DECLARATION
+@function color($group, $shade:normal, $transparency:1) {
+  @each $color in $color-stack{
+    $c-group: map-get($color, group);
+    $c-shade: map-get($color, id);
+    @if($group == map-get($color, group) and $shade == map-get($color, id)) {
+      @return rgba(map-get($color, color), $transparency);
+    }
+ }
+}

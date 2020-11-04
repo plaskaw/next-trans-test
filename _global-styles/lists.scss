@@ -1,0 +1,49 @@
+ul.dot {
+  li {
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include respond-from(tablet) {
+      padding-right: 30px;
+    }
+
+    &:before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      min-width: 4px;
+      position: relative;
+      background: $primary;
+      margin-right: 15px;
+      top: 7px;
+
+      @include respond-from(tablet) {
+        top: 9px;
+      }
+    }
+
+    span {
+      width: calc(100% - 24px);
+    }
+
+    ul {
+      width: 100%;
+      margin-top: 10px;
+      margin-left: 20px;
+
+      li {
+        padding-right: 0;
+
+        &:before {
+          height: 2px;
+          top: 9px;
+
+          @include respond-from(tablet) {
+            top: 11px;
+          }
+        }
+      }
+    }
+  }
+}

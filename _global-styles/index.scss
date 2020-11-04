@@ -1,0 +1,156 @@
+@import 'reset.scss';
+@import 'grid.scss';
+@import 'typography.scss';
+@import 'lists.scss';
+@import 'margins.scss';
+@import 'page-decors';
+@import 'error-pages';
+@import 'shame';
+
+
+.hide-desktop {
+  display: block !important;
+
+  @include respond-from(tablet) {
+    display: none !important;
+  }
+}
+
+.hide-mobile {
+  display: none !important;
+
+  @include respond-from(tablet) {
+    display: block !important;
+  }
+}
+
+body {
+  font-size: $font-default;
+  @include font(opensans, reg);
+  color: color(black);
+  overflow: hidden;
+  overflow-y: auto;
+
+  @include respond-from(tablet) {
+    font-size: $font-default-desktop;
+  }
+}
+
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+
+  &.responsive {
+    img {
+      width: 100%;
+      position: relative;
+      left: inherit;
+      top: inherit;
+      transform: none;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+  }
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  border: none;
+  background: #ededed;
+  margin: 40px 0;
+
+  @include respond-from(tablet) {
+    margin: 60px 0;
+  }
+
+  &.decor {
+    height: 20px;
+    background: url('/images/line-down-separator.svg');
+    background-repeat: no-repeat;
+    background-size: 480px;
+    background-position: center;
+  }
+}
+
+section.gray {
+  background: #fafafa;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  border-top: solid 1px #ededed;
+
+  @include respond-from(tablet) {
+    padding-top: 90px;
+  }
+}
+
+.content-box,
+.content-box-reversed {
+  padding-top: 30px;
+
+  @include respond-from(tablet) {
+    padding-top: 15px;
+    padding-left: 40px;
+  }
+}
+
+.content-box-reversed {
+  @include respond-to(tablet) {
+    padding-bottom: 30px;
+  }
+}
+
+.reverse .content-box {
+  @include respond-from(tablet) {
+    padding-left: 12px;
+    padding-right: 40px;
+  }
+}
+
+.icon-box {
+  background: white;
+  border-radius: 10px;
+  border: solid 1px #ededed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  margin-bottom: 20px;
+
+  @include respond-from(tablet) {
+    margin-bottom: 40px;
+    padding: 30px;
+  }
+
+  img {
+    width: 68px;
+    margin: 10px;
+
+    @include respond-from(tablet) {
+      width: 80px;
+    }
+  }
+
+  h5 {
+    margin: 0;
+    margin-top: 30px;
+  }
+}
+
+.page-content {
+  margin-top: 156px;
+
+  @include respond-from(tablet) {
+    margin-top: 160px;
+  }
+}

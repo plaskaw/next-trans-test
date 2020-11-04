@@ -1,0 +1,43 @@
+.base-input, .base-select, .base-textarea {
+  position: relative;
+  margin-bottom: 10px;
+
+  label, input:not(.react-dropdown-select-input), textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  label {
+    padding-left: 0;
+    font-size: 16px;
+  }
+  input:not(.react-dropdown-select-input), textarea {
+    border: 1px solid #b2b2b2;
+    border-radius: 4px;
+    padding: 10px 10px;
+  }
+  textarea {
+    min-height: 154px;
+  }
+  .react-dropdown-select {
+    border-radius: 4px;
+    border: 1px solid #b2b2b2;
+    padding: 10px 10px;
+  }
+  .react-dropdown-select-item {
+    padding: 10px;
+  }
+  .react-dropdown-select-item:hover {
+    background: #ededed !important;
+    color: #262626 !important;
+  }
+  .react-dropdown-select-item-selected, .react-dropdown-select-item-selected:hover {
+    background: #d9d9d9 !important;
+    color: #262626 !important;
+  }
+  .react-dropdown-select-dropdown {
+    box-shadow: none;
+    border: 1px solid #b2b2b2;
+    border-radius: 3px;
+  }
+}

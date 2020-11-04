@@ -1,0 +1,61 @@
+@import url('/fonts/fonts.css');
+
+// VARIABLES
+$mobile: 580px;
+$tablet: 941px;
+$desktop: 1200px;
+
+$max-width: 1296px;
+$col-gutter: 24px;
+
+
+// COLORS
+$white: #FFFFFF;
+$black: #262626;
+$primary: #e20074;
+$backgroundLight: #fafafa;
+
+
+// FONT SIZES
+$font-default: 16px;
+$font-default-desktop: 19px;
+
+$font-h1: 37px;
+$font-h1-desktop: 68px;
+
+$font-h2: 32px;
+$font-h2-desktop: 48px;
+
+$font-h3: 20px;
+$font-h3-desktop: 32px;
+
+$font-h4: 20px;
+$font-h4-desktop: 32px;
+
+$font-h5: $font-default;
+$font-h5-desktop: $font-default-desktop;
+
+$font-h6: $font-default;
+$font-h6-desktop: $font-default-desktop;
+
+
+$color-stack:
+  // BASIC
+  (group: white, id: normal, color: $white),
+  (group: black, id: normal, color: $black),
+  (group: prim, id: normal, color: $primary),
+  (group: bg, id: normal, color: $white),
+  (group: bg, id: light, color: $backgroundLight);
+
+
+$font-stack:
+  // HEADLINES
+  (group: teleneo, id: light, font: ('TeleNeoThin', sans-serif), weight: normal, style: normal),
+  (group: teleneo, id: reg, font: ('TeleNeoRegular', sans-serif), weight: normal, style: normal),
+  (group: teleneo, id: med, font: ('TeleNeoMedium', sans-serif), weight: normal, style: normal),
+  (group: teleneo, id: bold, font: ('TeleNeoBold', sans-serif), weight: normal, style: normal),
+  (group: teleneo, id: exbold, font: ('TeleNeoExtraBold', sans-serif), weight: normal, style: normal);
+
+
+$box-shadow: 0px 12px 90px -12px rgba(149,173,193,0.46);
+$box-shadow-active: 0px 12px 120px -12px rgba(149,173,193,0.29);

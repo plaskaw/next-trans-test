@@ -1,0 +1,143 @@
+body {
+  @include font(teleneo, reg);
+}
+
+h1, h2, h3,
+h4, h5, h6, p {
+  margin: 0;
+  word-break: break-word;
+  line-height: 1.2;
+  position: relative;
+  display: inline-block;
+  @include font(teleneo, reg);
+
+  @include respond-from(tablet) {
+    line-height: 1.03;
+  }
+}
+
+h1 {
+  font-size: $font-h1;
+  letter-spacing: -0.4px;
+  margin-bottom: 25px;
+  @include font(teleneo, exbold);
+  display: block;
+
+  @include respond-from(tablet) {
+    font-size: $font-h1-desktop;
+    letter-spacing: -0.3px;
+    margin-bottom: 50px;
+  }
+}
+
+h2 {
+  font-size: $font-h2;
+  letter-spacing: -0.33px;
+  margin-bottom: 25px;
+  display: block;
+
+  @include respond-from(tablet) {
+    font-size: $font-h2-desktop;
+    letter-spacing: -0.5px;
+    margin-bottom: 35px;
+  }
+}
+
+h3 {
+  font-size: $font-h3;
+  letter-spacing: -0.12px;
+  margin-bottom: 0;
+  @include font('teleneo', med);
+  padding-bottom: 5px;
+
+  @include respond-from(tablet) {
+    font-size: $font-h3-desktop;
+    letter-spacing: -0.2px;
+    padding-bottom: 7px;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  &:before {
+    background: #4b4b4b;
+    height: 1px;
+  }
+  &:after {
+    background: $primary;
+    height: 3px;
+    bottom: -1px;
+    width: 55px;
+  }
+}
+
+h4 {
+  font-size: $font-h4;
+  letter-spacing: -0.13px;
+  margin-bottom:  25px;
+  @include font('teleneo', med);
+
+  @include respond-from(tablet) {
+    font-size: $font-h4-desktop;
+    letter-spacing: -0.2px;
+    margin-bottom:  30px;
+  }
+}
+
+h5 {
+  font-size: $font-h5;
+  letter-spacing: -0.13px;
+  margin-bottom: 12px;
+  @include font(teleneo, bold);
+
+  @include respond-from(tablet) {
+    font-size: $font-h5-desktop;
+    letter-spacing: -0.2px;
+  }
+}
+
+h6 {
+  font-size: $font-h6;
+  letter-spacing: -0.13px;
+  margin-bottom:  25px;
+
+  @include respond-from(tablet) {
+    font-size: $font-h6-desktop;
+    letter-spacing: -0.2px;
+    margin-bottom:  30px;
+  }
+}
+
+p {
+  font-size: $font-default;
+  line-height: 1.25;
+
+  @include respond-from(tablet) {
+    font-size: $font-default-desktop;
+  }
+}
+
+strong {
+  @include font('teleneo', bold);
+}
+
+a {
+  color: $primary;
+}
+
+
+// Aligment
+.align-left {
+  text-align: left;
+}
+.align-center {
+  text-align: center;
+}
+.align-right {
+  text-align: right;
+}

@@ -1,0 +1,19 @@
+.error-pages {
+  .header-banner {
+    background-position: -380px -280px;
+    padding-bottom: 400px;
+
+    @include respond-from(tablet) {
+      height: 62vw;
+      background-position: left -320px;
+    }
+
+    .img-wrapper {
+      bottom: -300px;
+
+      @include respond-from(tablet) {
+        top: -13.5vw;
+      }
+    }
+  }
+}
