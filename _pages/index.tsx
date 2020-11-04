@@ -4,13 +4,12 @@ import useTranslation from 'next-translate/useTranslation';
 import { I18n } from '../node_modules/next-translate';
 
 
-
 const IndexPage = () => {
   const { t }:I18n = useTranslation();
 
   return (
     <>
-      {t('home:meta_title', {})}
+      t('home:meta_title', {})
     </>
   )
 };
